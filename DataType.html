@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New DataTypes</title>
+</head>
+
+
+<script>
+    let Cars = {
+        make: "Ford",
+        model: "Ecosport",
+
+    };
+    let carDetails = function (year, color) {
+        console.log(this.make + " " + this.model + " of " + year + " in " + color);
+    }
+    carDetails.apply(Cars, [2016, "white"]);
+
+    let car2 = {
+        make: "Toyota",
+        model: "Corolla"
+    };
+    carDetails.apply(car2, [1999, "Black"]);
+    let myCar = carDetails.bind(Cars, 2016, "white");
+    myCar();
+
+
+
+
+</script>
+
+<body>
+
+</body>
+
+</html>

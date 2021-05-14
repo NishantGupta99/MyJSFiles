@@ -1,0 +1,3 @@
+Harry wants to learn JavaScript,
+Harry is learning about AJAX today,
+Harry is very excited.

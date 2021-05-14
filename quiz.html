@@ -1,0 +1,25 @@
+function Sayhello() {
+let i;
+
+for (let i = 0; i < 5; i++) { console.log(i); } console.log(i); } Sayhello();
+    --------------------------------------------------------------------------------------------------- const
+    SameerGotTicket=new Promise((resolve,reject)=> {
+    setTimeout(() => {
+    resolve('Ticket');
+
+    }, 4000);
+    });
+    const getPopcorn = SameerGotTicket.then((t)=> {
+    console.log("Sameer : here are the tickets ");
+    console.log("Nishant saying we should go in ");
+    console.log("Sameer says no I am hungry !")
+    return new Promise((resolve,reject)=>resolve('we got popcorn'));
+    });
+
+    const getBeer = getPopcorn.then((t)=> {
+    console.log("I got you some popcorn");
+    console.log("Nishant saying we should go in ");
+    console.log("We should get some beer too ")
+    return new Promise((resolve,reject)=>resolve('Got Bira'));
+    });
+    getBeer.then((t)=> console.log(t));

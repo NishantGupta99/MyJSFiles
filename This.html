@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>This-Keyword</title>
+</head>
+
+<body>
+
+    <script>
+        console.log('person 1 has a Ticket');
+        console.log('person 2 has a Ticket');
+
+        const preMovie = async () => {
+            const sameerGotTicket = new Promise((resolve, reject) => {
+                setTimeout(() => resolve('got tickets'), 3000);
+            });
+            const getPopcorn = new Promise((resolve, reject) => resolve(' popcorn '));
+            const getBeer = new Promise((resolve, reject) => resolve(' Beer '));
+
+            let ticket = await sameerGotTicket;
+
+            console.log("Sameer : here are the tickets ");
+            console.log("Nishant saying we should go in ");
+            console.log("Sameer says no I am hungry !")
+
+
+            let popcorn = await getPopcorn;
+
+            console.log("I got you some popcorn");
+            console.log("Nishant saying we should go in ");
+            console.log("We should get some beer too ")
+
+            let Beer = await getBeer;
+            
+            console.log("Nishant: I got some Beer!");
+            console.log("Nishant: lets go now? ");
+            console.log("Sameer: lets go bro we are getting late!");
+            console.log("Nishant: Are we? *sarcastically*");
+
+            return ticket;
+        }
+
+        preMovie().then((m) => console.log(m));
+
+        console.log('person 4 has a Ticket');
+        console.log('person 5 has a Ticket');
+        console.log('person 6 has a Ticket');
+
+    </script>
+
+</body>
+
+</html>

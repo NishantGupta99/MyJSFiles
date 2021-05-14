@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <title>Praticing</title>
+</head>
+
+<body>
+    <p>I am learning JS</p>
+    <p id="demo"></p>
+    <script>
+        let Study = () => new Promise(function (resolve, reject) {
+            resolve(' Studied for exam,');
+        });;
+
+        let Exam = (message) => new Promise(function (resolve, reject) {
+            resolve(message + ' Did good in exams,');
+        });;
+
+        let wonShoes = (message) => new Promise(function (resolve, reject) {
+            resolve(message + ' I won new shoes.');
+        });;
+        Study().then(function (result) {
+            return Exam(result);
+        }).then(function (result) {
+            return wonShoes(result);
+        }).then(function (result) {
+            console.log('finished' + result);
+        })
+
+
+
+
+
+
+
+
+
+
+    </script>
+
+</body>
+
+</html>
